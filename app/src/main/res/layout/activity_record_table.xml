@@ -12,13 +12,24 @@
         android:id="@+id/main_FRAME_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="7" />
 
 
     <FrameLayout
         android:id="@+id/main_FRAME_map"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menu_BTN_newGame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@android:style/Widget.Button"
+        android:background="@drawable/btn_background"
+        android:text="@string/start_a_game"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -45,6 +45,7 @@ public class MenuActivity extends AppCompatActivity {
         menu_BUTTON_recordChart.setOnClickListener(v -> {
             Intent intent = new Intent(this, RecordTableActivity.class);
             startActivity(intent);
+            finish();
         });
     }
 
