@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Beat the bird</string>
+    <string name="initialScore">0</string>
+    <string name="button_mode_fast">Button mode - FAST</string>
+    <string name="button_mode_slow">Button mode - SLOW</string>
+    <string name="sensors_mode">Sensors mode</string>
+    <string name="welcome">Welcome!</string>
+    <string name="record_chart">Record chart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

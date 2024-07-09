@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".activities.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_color_background">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_score_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/main_score_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/initialScore"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_hearts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="16dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_heart1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_heart2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_heart3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heart" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_arrows"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_leftArrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/leftarrow" />
+
+            <View
+                android:layout_width="235dp"
+                android:layout_height="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_rightArrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/rightarrow" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/main_arrows"
+            android:layout_marginBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_spaceship1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_spaceship2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_spaceship3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_spaceship4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_spaceship5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_hearts_layout"
+            android:layout_above="@+id/main_arrows"
+            android:layout_marginBottom="16dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird11"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird12"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird13"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird14"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird16"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird17"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird18"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird19"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird20"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird21"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird22"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird24"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird25"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird26"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird27"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird28"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird29"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird30"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird31"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird32"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird33"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird34"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird35"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird36"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird37"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird38"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird39"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird40"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird41"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird42"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird43"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird44"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_bird45"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bird"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_hearts_layout"
+            android:layout_above="@+id/main_arrows"
+            android:layout_marginBottom="16dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin11"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin12"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin13"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin14"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin16"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin17"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin18"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin19"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin20"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin21"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin22"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin24"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin25"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin26"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin27"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin28"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin29"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin30"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin31"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin32"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin33"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin34"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin35"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin36"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin37"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin38"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin39"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin40"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin41"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin42"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin43"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin44"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_IMG_coin45"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/coin"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
